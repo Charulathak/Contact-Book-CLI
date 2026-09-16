@@ -2,7 +2,7 @@
 
 A CRUD contact manager built with React, as a hands-on project for learning core React patterns — component state, controlled forms, derived/computed data, and conditional rendering — without a backend or database.
 
-**[Live Demo](#)** · **[Screenshot](#)**
+**[Live Demo](#https://vercel.com/charu21/contact-book-cli/deployments)** 
 
 ## Features
 
