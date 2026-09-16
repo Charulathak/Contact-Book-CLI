@@ -1,0 +1,365 @@
+.contact-book {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  background: #EDE6D6;
+  min-height: 600px;
+  display: flex;
+  color: #2B2620;
+  border: 1px solid #d8cfb8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  width: 28px;
+  background: #DED2AE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  gap: 2px;
+  border-right: 1px solid #cbbf9d;
+}
+
+.letter {
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: #c4b895;
+  font-weight: 400;
+  cursor: default;
+}
+
+.letter.active {
+  color: #6B4F2A;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.contact-list-main-wrapper {
+  width: 260px;
+  border-right: 1px solid #cbbf9d;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list-main {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.contact-list-filter {
+  display: flex;
+  align-items: center;
+  background: #F7F2E4;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  padding: 6px 8px;
+  gap: 6px;
+}
+
+.contact-list-filter-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  width: 100%;
+  font-family: inherit;
+  color: #2B2620;
+}
+
+.contact-list-view {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 6px;
+}
+
+.contact-list-letter {
+  display: flex;
+  font-size: 10px;
+  color: #9c8c5f;
+  padding: 6px 8px 2px;
+  letter-spacing: 1px;
+}
+
+.contact-list-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.contact-list-item-wrapper:hover {
+  background: #F7F2E4;
+}
+
+.contact-list-item-wrapper.active {
+  background: #DED2AE;
+}
+
+.contact-list-item {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #6B4F2A;
+  color: #F7F2E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-list-empty {
+  padding: 20px 10px;
+  font-size: 13px;
+  color: #9c8c5f;
+}
+
+.contact-add-wrapper {
+  padding: 10px 14px;
+  border-top: 1px solid #cbbf9d;
+}
+
+.contact-add-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #6B4F2A;
+  color: #F7F2E4;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 0;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.contact-detail-wrapper {
+  flex: 1;
+  padding: 26px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-no-detail {
+  margin: auto;
+  color: #9c8c5f;
+  font-size: 14px;
+}
+
+.contact-detail-card {
+  background: #F7F2E4;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 420px;
+  height: fit-content;
+  box-shadow: 0 1px 0 #cbbf9d;
+  position: relative;
+}
+
+/* perforated strip — stays empty, content is now its sibling */
+.contact-detail-card-header {
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #cbbf9d 0 6px, transparent 6px 12px);
+}
+
+.contact-detail-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-detail-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.contact-detail-info {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #6B4F2A;
+  color: #F7F2E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.contact-detail-card-main {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact-detail-card-notes {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #cbbf9d;
+}
+
+.contact-detail-card-notes-label {
+  font-size: 11px;
+  color: #9c8c5f;
+  margin-bottom: 4px;
+}
+
+.contact-detail-card-notes-content {
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.contact-detail-card-delete-confirm {
+  margin-top: 18px;
+  background: #EDE6D6;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  padding: 12px;
+}
+
+.contact-detail-card-delete-confirm-text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.contact-detail-card-delete-confirm-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+
+.card-create-contact {
+  font-size: 13px;
+  color: #9c8c5f;
+  margin-bottom: 16px;
+}
+
+.contact-detail-card-edit-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.field-name {
+  font-size: 11px;
+  color: #9c8c5f;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 11px;
+  color: #9c8c5f;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 13.5px;
+  font-family: inherit;
+  resize: none;
+  background: #fff;
+  color: #2B2620;
+}
+
+.col-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13.5px;
+  font-family: inherit;
+  background: transparent;
+  color: #2B2620;
+}
+
+
+.btn-primary {
+  background: #6B4F2A;
+  color: #F7F2E4;
+  border: none;
+  border-radius: 3px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background: #a94442;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #6B4F2A;
+  border: 1px solid #cbbf9d;
+  border-radius: 3px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-btn {
+  border: 1px solid #cbbf9d;
+  background: #fff;
+  border-radius: 3px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6B4F2A;
+}
+
+.detail-row-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 14px;
+}
