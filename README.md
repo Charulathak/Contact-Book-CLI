@@ -1,16 +1,52 @@
-# React + Vite
+# Contact Book (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A CRUD contact manager built with React, as a hands-on project for learning core React patterns — component state, controlled forms, derived/computed data, and conditional rendering — without a backend or database.
 
-Currently, two official plugins are available:
+**[Live Demo](#)** · **[Screenshot](#)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Create** new contacts with name, phone, email, and notes
+- **Read** — browse contacts grouped alphabetically, with a jump-to-letter sidebar (like a rolodex)
+- **Update** existing contacts in place
+- **Delete** contacts, with a confirmation step before removal
+- **Search** contacts live by name
+- Empty and no-results states handled explicitly
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What I learned
 
-## Expanding the Oxlint configuration
+This was a practice project for solidifying React fundamentals. Along the way I worked through:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Managing multiple pieces of related state (`contacts`, `selectedId`, `mode`, `draft`) and keeping them in sync
+- Deriving computed values with `useMemo` (filtering + grouping contacts by letter) instead of storing redundant state
+- Controlled form inputs and a shared edit/create form driven by a single `mode` state
+- Debugging real errors as they came up — including a `DOMException` caused by rendering an invalid `<body>` element inside JSX, and CSS specificity issues where inline styles were overriding hover states
+- Setting up a local dev environment from scratch: Vite, npm, and troubleshooting Windows-specific issues (PowerShell execution policy blocking `npm.ps1`)
+
+## Tech stack
+
+- React (Vite)
+- [lucide-react](https://lucide.dev/) for icons
+- Plain CSS (no framework)
+
+## Running locally
+
+```bash
+git clone https://github.com/your-username/contact-book-react.git
+cd contact-book-react
+npm install
+npm run dev
+```
+
+Then open the local URL Vite prints (usually `http://localhost:5173`).
+
+## Possible next steps
+
+- Persist contacts to `localStorage` so data survives a refresh
+- Connect to a backend API (Flask/Express) for real persistence across devices
+- Add form validation feedback for phone/email fields
+- Add sorting/filtering options beyond alphabetical
+
+## Notes
+
+Built as a learning exercise to practice CRUD patterns and React state management from the ground up.
